@@ -1,0 +1,242 @@
+@startuml 
+ scale max 1080 width
+left to right direction 
+[<b>Theme.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Theme.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>styles.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>styles.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Commenting.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>Commenting.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Body.js</b>\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>ChromeStorage.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>GoogleSheetClient.js</b>\n\n variant:HighlightAndGo] #Grey
+[<b>TextSummary.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>TextSummary.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>TextSummary.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>PDF.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>TextSummary.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>reviewModel.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationServer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>HTML.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>AnnotationUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>BrowserStorageClient.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>BrowserStorageClient.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>RandomUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>TXT.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>HypothesisManager.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>HypothesisManager.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>HypothesisClientManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>test.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>GoogleSheetsManager.js</b>\n\n variant:HighlightAndGo] #Grey
+[<b>GoogleSheetsManager.js</b>\n\n variant:HighlightAndGo]-->[<b>GoogleSheetClient.js</b>\n\n variant:HighlightAndGo]
+[<b>scienceDirectContentScript.js</b>\n\n variant:HighlightAndGo] #Grey
+[<b>scienceDirectContentScript.js</b>\n\n variant:HighlightAndGo]-->[<b>URLUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>scienceDirectContentScript.js</b>\n\n variant:HighlightAndGo]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationList.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>NoCodebook.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>Toolset.js</b>\n Uses Feature:Manual\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Neo4JClientManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Neo4JClientManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>AnnotationServerManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Neo4JClientManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Neo4JClientManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Neo4JClient.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>DataUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>DataUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>SheetUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>ReplyAnnotation.js</b>\n\n variant:HighlightAndGo] #Grey
+[<b>ReplyAnnotation.js</b>\n\n variant:HighlightAndGo]-->[<b>AnnotationUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ReplyAnnotation.js</b>\n\n variant:HighlightAndGo]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>DOM.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>DeleteGroup.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>AnnotatedContentManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>AnnotatedContentManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>acmContentScript.js</b>\n\n variant:HighlightAndGo] #Grey
+[<b>acmContentScript.js</b>\n\n variant:HighlightAndGo]-->[<b>URLUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>acmContentScript.js</b>\n\n variant:HighlightAndGo]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>UpdateCodebook.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>UpdateCodebook.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Theme.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>ReadAnnotation.js</b>\n Uses Feature:UserFilter\n Uses Feature:Delete\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>CreateAnnotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>UpdateAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>DeleteAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>RolesManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>PDF.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Classifying.js</b>\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationManagement.js</b>\n Uses Feature:SidebarNavigation\n Uses Feature:UserFilter\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Annotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationServerManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>AnnotationServerManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>ChromeStorage.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationServerManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>pages.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>pages.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>popup.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>BrowserStorage.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>BrowserStorage.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>AnnotationServer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ReadAnnotation.js</b>\n Uses Feature:UserFilter\n Uses Feature:Delete\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>ReadAnnotation.js</b>\n Uses Feature:UserFilter\n Uses Feature:Delete\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>DOMTextUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Neo4JManager.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>Neo4JManager.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>ChromeStorage.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>viewer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>locales.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>locales.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>pdf.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Buttons.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Code.js</b>\n\n variant:HighlightAndGo] #Grey
+[<b>Code.js</b>\n\n variant:HighlightAndGo]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Code.js</b>\n\n variant:HighlightAndGo]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Sidebar.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>AnnotationImporter.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>AnnotationImporter.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationImporter.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>FileUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationImporter.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Codebook.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>options.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>ColorUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>reviewModel.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>reviewModel.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Assessing.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>Assessing.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Body.js</b>\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>version.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>clean.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>clean.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>GoogleSheetsClientManager.js</b>\n\n variant:HighlightAndGo] #Grey
+[<b>GoogleSheetsClientManager.js</b>\n\n variant:HighlightAndGo]-->[<b>GoogleSheetClient.js</b>\n\n variant:HighlightAndGo]
+[<b>GoogleSheetsClientManager.js</b>\n\n variant:HighlightAndGo]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CreateAnnotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>CreateAnnotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CreateAnnotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CreateAnnotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CreateAnnotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Annotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>CreateAnnotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>DOMTextUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CreateAnnotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>PDFTextUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CreateAnnotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>PDF.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CommentingForm.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>CommentingForm.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ModeManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>ModeManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ModeManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>manifest.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>manifest.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>applyBrowserPrefixesFor.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>manifest.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>GroupSelector.js</b>\n Uses Feature:Manual\n Uses Feature:CodebookDelete\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>GroupSelector.js</b>\n Uses Feature:Manual\n Uses Feature:CodebookDelete\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>GroupSelector.js</b>\n Uses Feature:Manual\n Uses Feature:CodebookDelete\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>ChromeStorage.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>GroupSelector.js</b>\n Uses Feature:Manual\n Uses Feature:CodebookDelete\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ContentScriptManager.js</b>\n Uses Feature:Manual\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>ContentScriptManager.js</b>\n Uses Feature:Manual\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>TargetManager.js</b>\n Uses Feature:HTML\n Uses Feature:Dropbox\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ContentScriptManager.js</b>\n Uses Feature:Manual\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Sidebar.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ContentScriptManager.js</b>\n Uses Feature:Manual\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>CodebookManager.js</b>\n Uses Feature:CodebookDelete\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ContentScriptManager.js</b>\n Uses Feature:Manual\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ContentScriptManager.js</b>\n Uses Feature:Manual\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>AnnotationBasedInitializer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CryptoUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>EmptyCodebook.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>Popup.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>pdf.worker.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>DeleteAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>DeleteAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>DeleteAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>DeleteAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>pack.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>pack.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Options.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Options.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Body.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>TargetManager.js</b>\n Uses Feature:HTML\n Uses Feature:Dropbox\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>TargetManager.js</b>\n Uses Feature:HTML\n Uses Feature:Dropbox\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>MoodleReport.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>MoodleReport.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>MoodleReport.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>MoodleReport.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>MoodleReport.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Commenting.js</b>\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>fonts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>fonts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>index.js</b>\n\n variant:OATS] #Grey
+[<b>gulpfile.babel.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>GoogleSheetGenerator.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>GoogleSheetGenerator.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>GoogleSheetGenerator.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>AnnotationUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>GoogleSheetGenerator.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>GoogleSheetGenerator.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>GoogleSheetGenerator.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Theme.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>DOMTextUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>DOMTextUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>DOM.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>DOMTextUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationExporter.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>ReadCodebook.js</b>\n Uses Feature:Codebook\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>ReadCodebook.js</b>\n Uses Feature:Codebook\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Buttons.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ReadCodebook.js</b>\n Uses Feature:Codebook\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Codebook.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>ReadCodebook.js</b>\n Uses Feature:Codebook\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Theme.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Resume.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>Canvas.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>Canvas.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>FileUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Codebook.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Codebook.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Theme.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Codebook.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Codebook.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Hypothesis.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Hypothesis.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>AnnotationServer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>UserFilter.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>UserFilter.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>UserFilter.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>RandomUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>background.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>background.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Popup.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>MoodleComment.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>MoodleComment.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Commenting.js</b>\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>MoodleComment.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationServerManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>contentScript.js</b>\n Uses Feature:Dropbox\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>contentScript.js</b>\n Uses Feature:Dropbox\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>AnnotationBasedInitializer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>contentScript.js</b>\n Uses Feature:Dropbox\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>ContentScriptManager.js</b>\n Uses Feature:Manual\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CreateCodebook.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>HypothesisClientManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>scripts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>scripts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>PDFTextUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>Classifying.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>Classifying.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Body.js</b>\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>CodebookManager.js</b>\n Uses Feature:CodebookDelete\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>CodebookManager.js</b>\n Uses Feature:CodebookDelete\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>CreateCodebook.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>CodebookManager.js</b>\n Uses Feature:CodebookDelete\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>ReadCodebook.js</b>\n Uses Feature:Codebook\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>build.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>RolesManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>RolesManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Annotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>Annotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>default.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>PDF.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>chromereload.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>chromereload.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationBasedInitializer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>AnnotationBasedInitializer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>URLUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationBasedInitializer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>AnnotationBasedInitializer.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>Neo4JClient.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>DeleteCodebook.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>UpdateAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>UpdateAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Events.js</b>\n Uses Feature:UserFilter\n Uses Feature:Codebook\n Uses Feature:CodebookDelete\n Uses Feature:Manual\n Uses Feature:SidebarNavigation\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>UpdateAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>LanguageUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>UpdateAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>UpdateAnnotation.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Annotation.js</b>\n Uses Feature:Classifying\n\n variant:HighlightAndGo\n variant:OATS]
+[<b>BrowserStorageManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>BrowserStorageManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>ChromeStorage.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>BrowserStorageManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>URLUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>BrowserStorageManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>BrowserStorageClient.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>BrowserStorageManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>AnnotationServerManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>BrowserStorageSearch.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>BrowserStorageSearch.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>BrowserStorageManager.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>BrowserStorageSearch.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>URLUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>BrowserStorageSearch.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Alerts.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>BrowserStorageSearch.js</b>\n\n variant:HighlightAndGo\n variant:OATS]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>applyBrowserPrefixesFor.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>springerContentScript.js</b>\n\n variant:HighlightAndGo] #Grey
+[<b>springerContentScript.js</b>\n\n variant:HighlightAndGo]-->[<b>URLUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>springerContentScript.js</b>\n\n variant:HighlightAndGo]-->[<b>Config.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>BuiltIn.js</b>\n\n variant:HighlightAndGo\n variant:OATS] #Grey
+[<b>TargetManager.js</b>\n Uses Feature:Dropbox\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>content.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>content.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>images.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+[<b>images.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]-->[<b>args.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS]
+[<b>URLUtils.js</b>\n\n variant:ConceptAndGo\n variant:HighlightAndGo\n variant:OATS] #White
+@enduml
