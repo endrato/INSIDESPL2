@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ include file="../../tiles/templates/taglibs.jsp"%>
 <div class="big-title">
-	<spring:message code="puml.title"></spring:message>
+	<spring:message code="puml.bigTitle"></spring:message>
 </div>
 <form method="post" action="/puml/showDiagram/${splId}">
 	<c:forEach var="folder" items="${folders}">

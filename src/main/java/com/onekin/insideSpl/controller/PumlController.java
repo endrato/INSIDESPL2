@@ -24,25 +24,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.onekin.classVisualizer.generator.PumlGenerator;
 import com.onekin.classVisualizer.generator.classList;
 import com.onekin.classVisualizer.variantMiner.VariantProcessor;
-import com.onekin.insideSpl.businessLogic.FeatureBLInterface;
-import com.onekin.insideSpl.businessLogic.GenericBLInterface;
 import com.onekin.insideSpl.businessLogic.ProductBLInterface;
-import com.onekin.insideSpl.domain.Feature;
-import com.onekin.insideSpl.domain.SPL;
-import com.onekin.insideSpl.domain.VariantComponent;
-import com.onekin.insideSpl.domain.VariantFeature;
+import com.onekin.insideSpl.domain.Folder;
 import com.onekin.insideSpl.domain.VariantModel;
-import com.onekin.insideSpl.utils.Triplet;
 
 @Controller
 @RequestMapping(value = "/puml")
 public class PumlController {
-	private static ArrayList<File> folders = new ArrayList<File>();
 	@Autowired
 	private ProductBLInterface productBL;
-	
-	@Autowired
-	private FeatureBLInterface featureBL;
 
 	@RequestMapping(value = "")
 	public String index(Model model) {
@@ -114,27 +104,37 @@ public class PumlController {
 		
 		List<VariantModel> products = productBL.orderBySelectedFeaturesSize(productBL.getAllProductsOfSpl(id));
 		String path = products.get(0).getPath().split("/Variants")[0];
+		//ArrayList<File> folders2 = new ArrayList<File>();
 		if(products.size()==0) {
 			System.out.println("tamano"+products.size());
 			return "redirect:/";
 		}
-		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<Folder> list = new ArrayList<Folder>();
+		ArrayList<String> list2 = new ArrayList<String>();
+		Integer i = 0;
 		Iterator<Entry<String, String>> it = allParams.entrySet().iterator();
 		while(it.hasNext()) {
+			i++;
 			Entry<String, String> entry = it.next();
 			String e =entry.getKey();
-			list.add(e);
+			Folder f = new Folder(e,i);
+			File f1 = new File(e);
+			f.setFiles(classList.getClasesOf1Folder(f1));
+			list.add(f);
+			list2.add(e);
+			//folders2.add(f1);
 		}
 		File f = new File(path);
-		ArrayList<String> prods = PumlGenerator.getVariantsOfFolders(f, list);
+		ArrayList<String> prods = PumlGenerator.getVariantsOfFolders(f, list2);
+		//List<File> fList = classList.getClases(folders2);
 		model.addAttribute("splId",id);
+		//model.addAttribute("files",fList);
 		model.addAttribute("products",prods);
 		model.addAttribute("folders",list);
-		System.out.println(list.size());
 		return "pumlView/productsSelection";
 	}
 	@PostMapping(value ="/caracteristics/{id}")
-	public String caracteristicsSelectorWithProduct(Model model,@PathVariable(name = "id",required = true) String id,@RequestParam Map<String,String> allParams/*@RequestParam("splId") String id*/) {
+	public String caracteristicsSelectorWithProduct(Model model,@PathVariable(name = "id",required = true) String id,@RequestParam Map<String,String> allParams) {
 		ArrayList<String> listProducts = new ArrayList<String>();
 		ArrayList<String> folders = new ArrayList<String>();
 		Iterator<Entry<String, String>> it = allParams.entrySet().iterator();
@@ -163,26 +163,13 @@ public class PumlController {
 		
 		return "pumlView/caracteristicsSelection";
 	}
-	
-	/*@RequestMapping(value ="/caracteristics/{id}")
-	public String caracteristicsSelector(Model model, @PathVariable(name = "id",required = true) String id) {
-		
-		List<Feature> features = featureBL.getAllFeaturesOfSpl(id);
-		if(features.size()==0) {
-			return "redirect:/";
-		}
-		
-		model.addAttribute("splId",id);
-		model.addAttribute("features",features);
-		
-		return "pumlView/caracteristicsSelection";
-	}*/
 	@PostMapping(value ="/showDiagram/{id}")
 	public String DiagramShower(Model model, @PathVariable(name = "id",required = true) String id,@RequestParam Map<String,String> allParams) throws IOException {
 		Iterator<Entry<String, String>> it = allParams.entrySet().iterator();
 		ArrayList<String> variants =  new ArrayList<String>();
 		ArrayList<String> featureSelected = new ArrayList<String>();
 		ArrayList<String> folders = new ArrayList<String>();
+		ArrayList<File> folders2 = new ArrayList<File>();
 		List<VariantModel> products = productBL.orderBySelectedFeaturesSize(productBL.getAllProductsOfSpl(id));
 		String path = products.get(0).getPath().split("/Variants")[0];
 		while(it.hasNext()) {
@@ -193,7 +180,10 @@ public class PumlController {
 				variants.add(e);
 			}
 			else if(e.contains("\\") || e.contains("/")) {
+				File f1 = new File(e);
+				folders2.add(f1);
 				folders.add(e);
+				System.out.println("He añadido a folders" + e);
 			}
 			else {
 				System.out.println("HE AÑADIDO a features "+e);
@@ -201,8 +191,9 @@ public class PumlController {
 			}
 		}
 		File f = new File(path);
-		List<File> fList = classList.getFolders(f);
-		PumlGenerator.createPumlByVariant2AndFeatureInfo(f, variants, featureSelected, false, (ArrayList<File>) fList);
+		//List<File> fList = classList.getClases(folders2);
+		//System.out.println(fList.size() + "--------------------");
+		PumlGenerator.createPumlByVariant2AndFeatureInfo(f, variants, featureSelected, false, folders2);
 		String fotopath ="src/main/webapp/static/img/diagramWithoutFunctionInfo.png";
 		
 		model.addAttribute("splId",id);
@@ -214,72 +205,5 @@ public class PumlController {
 		return "pumlView/showDiagram";
 	}
 	
-	/*public static ArrayList<File> getFolders(final File folder) {
-		for (final File fileEntry : folder.listFiles()) {
-			if (fileEntry.isDirectory() && !fileEntry.toString().contains(".git")) {
-				folders.add(fileEntry);
-				System.out.println("añadida la carpeta : " + fileEntry);
-				getFolders(fileEntry);
-			}
-		}
-		// System.out.println(clases.size());
-		return folders;
-	}*/
-	/*
-	@RequestMapping(value ="/compare/{id1}/{id2}")
-	public String compare(Model model, @PathVariable(name = "id1",required = true) String id1, @PathVariable(name = "id2",required = true) String id2) {
-		
-		if(MainController.session().getAttribute("selectedSplId") == null)
-			return "redirect:/";
-		
-		VariantModel product1 = productBL.getProductById(id1);
-		VariantModel product2 = productBL.getProductById(id2);
-		
-		if(product1 == null || product2 == null) {
-			return "redirect:/";
-		}
-		
-		Map<String, String> info = new HashMap<String, String>();
-		
-		VariantModel[] plist = {product1,product2};
-		
-		for(VariantModel p : plist ) {
-			int smf = 0;
-			int sof = 0;
-			int tf = 0;
-			
-			for(VariantComponent vc : p.getVariants()) {
-				if(vc instanceof VariantFeature) {
-					if(vc.isSelected()) {
-						VariantFeature vf = (VariantFeature) vc;
-						if(vf.getFeature().getType().contentEquals("MANDATORY")) {
-							smf++;
-						}else {
-							sof++;
-						}
-					}
-					
-					tf++;
-				}
-			}
-
-			info.put(p.getId() + "_smf",Integer.toString(smf));
-			info.put(p.getId() + "_sof",Integer.toString(sof));
-			info.put(p.getId() + "_tf",Integer.toString(tf));
-		}
-		
-		String comparationJson = productBL.compareProducts(product1,product2);
-		
-		model.addAttribute("prod1", product1);
-		model.addAttribute("prod1data",productBL.getProductConfigurationJsonById(id1));
-		
-		model.addAttribute("prod2", product2);
-		model.addAttribute("prod2data",productBL.getProductConfigurationJsonById(id2));
-		
-		model.addAttribute("info",info);
-		model.addAttribute("similarityData", comparationJson);
-		
-		return "productView/compare";
-	}*/
 
 }

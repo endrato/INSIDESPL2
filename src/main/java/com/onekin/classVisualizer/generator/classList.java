@@ -82,11 +82,26 @@ public class classList {
 					name = fileEntry.getName();
 					if (name.endsWith(".js")) {
 						clases.add(fileEntry);
-						System.out.println("añadido : " + fileEntry);
 					}
 				}
 			}
 		 }
+		// System.out.println(clases.size());
+		return clases;
+	}
+	public static ArrayList<String> getClasesOf1Folder(File carpeta) {
+		String name = "";
+		ArrayList<String> clases = new ArrayList<String>();
+			File var = carpeta;
+			for (final File fileEntry : var.listFiles()) {
+				if (fileEntry.isDirectory()) {
+				} else {
+					name = fileEntry.getName();
+					if (name.endsWith(".js")) {
+						clases.add(fileEntry.getName());
+					}
+				}
+			}
 		// System.out.println(clases.size());
 		return clases;
 	}

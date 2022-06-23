@@ -107,6 +107,7 @@ public class PumlGenerator {
 		HashMap<File, ArrayList<String>> list = generateVariantDict(file,variantes);
 		//Main.leerHashMap2(list);
 		ArrayList<File> clasesSelected = classList.getClases(SelectedFolder);
+		//ArrayList<File> clasesSelected = SelectedFolder;
 		fw.write("@startuml \n scale max 1080 width\r\n" + 
 		"left to right direction \n"); 
 		String var;
@@ -134,9 +135,18 @@ public class PumlGenerator {
 						 {
 							 File clase = wr3.next();
 							 if(list.keySet().contains(clase)) {
+								ArrayList<String> lista2 = list.get(clase);
+								importe = getEscritura(clase,list,featureSelected,checked,featureInfo);
+								fw.write(importe);
+								if (lista2.size()==variantes.size()) {
+									 fw.write(" #White");
+								 }
+								 else {
+									 fw.write(" #Grey");
+								 }
+								fw.write("\n");
 							 	fw.write(escritura);//AQUI HAY Q METER EL COLOR
 							 	fw.write("-->");
-								 importe = getEscritura(clase,list,featureSelected,checked,featureInfo);
 							 	fw.write(importe);
 							 	fw.write("\n");
 							 }
@@ -193,7 +203,7 @@ public class PumlGenerator {
 				 System.out.println("FINAL -> estoy procesando la feature: " +var);
 				 if(featureSelected.contains(var)) {
 					 System.out.println("LA AÑADO!!");
-					 escritura = escritura +"\\n Uses Feature:" + var;
+					 escritura = escritura +"\\n Feature:" + var;
 				 }
 				 else {
 					 System.out.println("RESULTA QUE NO ESTA!");
@@ -208,7 +218,7 @@ public class PumlGenerator {
 				 var = wr2.next();
 				 var= var.split(".vdm")[0];
 				 System.out.println("Estoy en la clase : " + actual + " y he añadido : " + var);
-				 escritura = escritura + ("\\n variant:" + var);
+				 escritura = escritura + ("\\n Variant:" + var);
 			 }
 			 escritura = escritura + "]";
 		return escritura;
